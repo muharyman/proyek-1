@@ -55,13 +55,13 @@ Pada proyek ini untuk melakukan state handling kita akan menggunakan session. se
 {setiap apapun yang dikerjakan tolong ditulis disini apa yg sudah dikerjakan walalupun hanya satu fungsi}
 ## TIMELINE
 
-TGL 14 ,Pembuatan Spek dan modifikasi
-TGL 14-16,Pembuatan Mockup dan pembagian kerja
-TGL 15 ,Pembuatan Database
-TGL 16-21 , Eksekusi Pengerjaan
-TGL 14 - 26 , Pengawasan
-TGL 21 , Testing
-TGL 21/22 , Pertemuan dengan Client
-TGL 22 - 24 , PERBAIKAN JIKA DIPERLUKAN
-TGL 25 , Beli server dan upload
-TGL 27 PENUTUPAN.
+1.  TGL 14 ,Pembuatan Spek dan modifikasi
+2.  TGL 14-16,Pembuatan Mockup dan pembagian kerja
+3.  TGL 15 ,Pembuatan Database
+4.  TGL 16-21 , Eksekusi Pengerjaan
+5.  TGL 14 - 26 , Pengawasan
+6.  TGL 21 , Testing
+7.  TGL 21/22 , Pertemuan dengan Client
+8.  TGL 22 - 24 , PERBAIKAN JIKA DIPERLUKAN
+9.  TGL 25 , Beli server dan upload
+10. TGL 27 PENUTUPAN.
