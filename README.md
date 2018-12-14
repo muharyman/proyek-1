@@ -4,7 +4,7 @@
 
 Proyek ini adalah proyek pembuatan web.Web ini nantinya akan dijadikan perantara antara pembeli dan penjual.Web ini akan terdiri dari beberapa halaman , Seperti login admin ,edit post , home , product (product detail), add product , about us ,tambahan yang dianggap penting , serta pembuatan database,beriku deskripsi lebih lanjut.
 
-##LOGIN (admin)
+## LOGIN (admin)
 
 URL yang akan digunakan adalah "..../admin" di login hanya perlu tabel username dan password ,pengecekan dilakukan ke server. Gunakan Method POST
 
