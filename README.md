@@ -51,6 +51,8 @@ Pada proyek ini untuk melakukan state handling kita akan menggunakan session. se
 6. Add Product 
 7. LOGOUT
 
+## Yang sudah dikerjakan
+{setiap apapun yang dikerjakan tolong ditulis disini apa yg sudah dikerjakan walalupun hanya satu fungsi}
 ## TIMELINE
 
 TGL 14 ,Pembuatan Spek dan modifikasi
