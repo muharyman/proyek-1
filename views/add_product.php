@@ -1,0 +1,1 @@
+add product (ada checkauth dulu, method POST)
