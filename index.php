@@ -4,18 +4,36 @@ include('assets/php/get_url.php');
 
 $request = explode('/', explode('?', uri())[0]);
 
-if ($request[1] == 'admin') {
+if ($request[1] == 'about') {
 	if ($request[2] == '') {
-		include('views/view_admin.php');
+		include('views/about_us.php');
 	}
-	else if (($request[2] == 'edit') && ($request[3] == '')) {
-		include('views/edit_admin.php');
+	else {
+		header('Location: /about');
 	}
-	else if (($request[2] == 'login') && ($request[3] == '')) {
-		include('views/login_admin.php');
+}
+else if ($request[1] == 'addproduct') {
+	if ($request[2] == '') {
+		include('views/add_product.php');
+	}
+	else {
+		header('Location: /addproduct');
+	}
+}
+else if ($request[1] == 'admin') {
+	if ($request[2] == '') {
+		include('views/admin.php');
 	}
 	else {
 		header('Location: /admin');
+	}
+}
+else if ($request[1] == 'editproduct') {
+	if ($request[2] == '') {
+		include('views/edit_product.php');
+	}
+	else {
+		header('Location: /products');
 	}
 }
 else if ($request[1] == 'home') {
@@ -26,15 +44,28 @@ else if ($request[1] == 'home') {
 		header('Location: /home');
 	}
 }
-else if ($request[1] == 'product') {
+else if ($request[1] == 'admin') {
 	if ($request[2] == '') {
-		include('views/product.php');
-	}
-	else if (($request[2] == 'search') && ($request[3] == '')) {
-		include('views/search_product.php');
+		include('views/login.php');
 	}
 	else {
-		header('Location: /product');
+		header('Location: /admin');
+	}
+}
+else if ($request[1] == 'detail') {
+	if ($request[2] == '') {
+		include('views/product_detail.php');
+	}
+	else {
+		header('Location: /products');
+	}
+}
+else if ($request[1] == 'products') {
+	if ($request[2] == '') {
+		include('views/products.php');
+	}
+	else {
+		header('Location: /products');
 	}
 }
 else {
