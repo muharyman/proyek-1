@@ -19,6 +19,15 @@
     // check whether there is a result or not
     if (mysqli_num_rows($row)) {
         if (password_verify($password, $row->fetch_assoc()["password"])) {
+            
+            // Set token in database
+            include("assets/php/token.php");
+            setToken($username);
+
+            // Set admin access info in cookie
+            setcookie("username", $username, NULL, '/');
+            setcookie("token", $username, NULL, '/');
+
             echo(1); // correct login
         }
         else {
