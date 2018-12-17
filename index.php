@@ -44,12 +44,12 @@ else if ($request[1] == 'home') {
 		header('Location: /home');
 	}
 }
-else if ($request[1] == 'admin') {
+else if ($request[1] == 'login') {
 	if ($request[2] == '') {
 		include('views/login.php');
 	}
 	else {
-		header('Location: /admin');
+		header('Location: /login');
 	}
 }
 else if ($request[1] == 'detail') {

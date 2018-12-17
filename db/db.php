@@ -1,5 +1,5 @@
 <?php
-  require("/config.php");
+  require("db/config.php");
 
   // Connect to server
   $db = new mysqli($dbhost, $dbuser, $dbpass);

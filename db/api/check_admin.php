@@ -1,24 +1,31 @@
 <?php
-    // Check if the username is exist and match the password
-    function checkAdmin($username, $password) {
-        require("../../db/db.php"); // nanti menyesuaikan aja lokasi dia di-run
-        
-        $ready = $db->prepare("select password from admin where username = ?");
-        $ready->bind_param('s', $username);
-        $ready->execute();
-        
-        $row = $ready->get_result();
-        
-        if (mysqli_num_rows($row)) {
-            if (password_verify($password, $row->fetch_assoc()["password"])) {
-                return 1;
-            }
-            else {
-                return 0;
-            }
+    include("db/db.php");
+    // now we have $db to communicate with database
+    
+    // use this way when it receives json data (method POST) if not use $_POST
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    $username = $data["username"];
+    $password = $data["password"];
+    
+    // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
+    $ready = $db->prepare("select password from admin where username = ?");
+    $ready->bind_param('s', $username);
+    $ready->execute();
+    
+    // Get the result of execution
+    $row = $ready->get_result();
+    
+    // check whether there is a result or not
+    if (mysqli_num_rows($row)) {
+        if (password_verify($password, $row->fetch_assoc()["password"])) {
+            echo(1); // correct login
         }
         else {
-            return 0;
+            echo(2); // username and password do not match
         }
+    }
+    else {
+        echo(0); // the username does not exist in database
     }
 ?>
