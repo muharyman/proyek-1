@@ -13,7 +13,7 @@ function setToken($username) {
     $ready->bind_param('ss', $username, $token);
     $ready->execute();
     
-    return 0;
+    return $token;
 }
 
 // Delete admin access info from database

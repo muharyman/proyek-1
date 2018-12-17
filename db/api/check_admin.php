@@ -22,11 +22,11 @@
             
             // Set token in database
             include("assets/php/token.php");
-            setToken($username);
+            $token = setToken($username);
 
             // Set admin access info in cookie
             setcookie("username", $username, NULL, '/');
-            setcookie("token", $username, NULL, '/');
+            setcookie("token", $token, NULL, '/');
 
             echo(1); // correct login
         }
