@@ -35,6 +35,6 @@
         }
     }
     else {
-        echo(0); // the username does not exist in database
+        echo(3); // the username does not exist in database
     }
 ?>
