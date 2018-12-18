@@ -4,15 +4,7 @@ include('assets/php/get_url.php');
 
 $request = explode('/', explode('?', uri())[0]);
 
-if ($request[1] == 'about') {
-	if ($request[2] == '') {
-		include('views/about_us.php');
-	}
-	else {
-		header('Location: /about');
-	}
-}
-else if ($request[1] == 'addproduct') {
+if ($request[1] == 'addproduct') {
 	if ($request[2] == '') {
 		include('views/add_product.php');
 	}
