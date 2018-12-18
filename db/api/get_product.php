@@ -14,7 +14,6 @@
 
         // Check whether the product is exist or not
         if (mysqli_num_rows($row)) {
-
             // return an object Product
             return new Product(
                 $row["id"],
@@ -22,7 +21,8 @@
                 $row["description"],
                 $row["stock"],
                 $row["image"],
-                $row["time"]
+                $row["time"],
+                $row["cost"]
             );
         }
         else {
