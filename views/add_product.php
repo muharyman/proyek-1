@@ -1,1 +1,3 @@
-add product (ada checkauth dulu, method POST)
+<?php
+    include('assets/php/checkauth.php');
+?>

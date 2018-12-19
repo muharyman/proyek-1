@@ -1,5 +1,5 @@
 <?php
-    include('db/api/check_admin.php');
+    include('assets/php/checkauth.php');
 ?>
 
 <!DOCTYPE html>
@@ -12,20 +12,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
 	<div class="login-form">
-		<form action="login.php" method="POST">
+		<form action="views/admin.php" onsubmit="return validateLoginForm()" method="POST">
             <h2 class=text-center>ADMIN</h2>
 			<div class="form-group">
 				<input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+				<input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
 			</div>
 			<button type="submit" class="btn btn-primary btn-block">LOGIN</button>
 		</form>
 	</div>
+	<script src="assets/js/validation.js"></script>
 </body>
 </html>

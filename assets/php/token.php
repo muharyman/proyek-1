@@ -1,10 +1,7 @@
 <?php
 
 // Set admin access info in database
-function setToken($username) {
-    include('db/db.php');
-    // now we have $db to communicate with database
-
+function setToken($db, $username) {
     // Generate token
     $token = md5(uniqid(rand(), true));
 
@@ -17,10 +14,7 @@ function setToken($username) {
 }
 
 // Delete admin access info from database
-function delToken($username, $token) {
-    include('db/db.php');
-    // now we have $db to communicate with database
-
+function delToken($db, $username, $token) {
     // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
     $ready = $db->prepare("delete from admin_access where username = ? and token = ?");
     $ready->bind_param('ss', $username, $token);
