@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 18, 2018 at 10:14 AM
+-- Generation Time: Dec 19, 2018 at 10:15 PM
 -- Server version: 5.7.24-0ubuntu0.18.04.1
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
@@ -47,8 +47,15 @@ INSERT INTO `admin` (`username`, `password`) VALUES
 CREATE TABLE `admin_access` (
   `username` varchar(255) NOT NULL,
   `token` varchar(255) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `time` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_access`
+--
+
+INSERT INTO `admin_access` (`username`, `token`, `time`) VALUES
+('hamdi', '816c20dd757757f5c1e08ac7f55b08ef', 1545232027);
 
 -- --------------------------------------------------------
 
