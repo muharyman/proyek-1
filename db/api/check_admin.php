@@ -2,10 +2,9 @@
     include('../db2.php');
     // now we have $db to communicate with database
     
-    $json = file_get_contents('php://input');
-    
-    $username = json_decode($json)->username;
-    $password = json_decode($json)->password;
+    // receive post request
+    $username = $_POST["username"];
+    $password = $_POST["password"];
     
     // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
     $ready = $db->prepare("select password from admin where username = ?");
@@ -27,13 +26,18 @@
             setcookie("username", $username, NULL, '/');
             setcookie("token", $token, NULL, '/');
 
-            echo 1; // correct login
+            // Delete all admin access info which has been expired
+            $ready = $db->prepare("delete from admin_access where time < ?");
+            $ready->bind_param('s', time());
+            $ready->execute();
+            
+            header('Location: /admin'); // correct login
         }
         else {
-            echo 2; // username and password do not match
+            header('Location: /login'); // username and password do not match
         }
     }
     else {
-        echo 3; // the username does not exist in database
+        header('Location: /login'); // the username does not exist in database
     }
 ?>

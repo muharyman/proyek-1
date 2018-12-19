@@ -1,7 +1,3 @@
-<?php
-    include('assets/php/checkauth.php');
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,13 +12,13 @@
 </head>
 <body>
 	<div class="login-form">
-		<form action="views/admin.php" onsubmit="return validateLoginForm()" method="POST">
+		<form action="db/api/check_admin.php" onsubmit="return validateLoginForm()" method="POST">
             <h2 class=text-center>ADMIN</h2>
 			<div class="form-group">
-				<input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
+				<input type="username" class="form-control" id="username" name="username" placeholder="Enter username" name="username">
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
 			</div>
 			<button type="submit" class="btn btn-primary btn-block">LOGIN</button>
 		</form>
