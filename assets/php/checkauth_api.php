@@ -1,5 +1,5 @@
 <?php
-    include('db/db.php');
+    include('../db2.php');
 
     // Get admin access info from cookie
     $username = $_COOKIE["username"];
