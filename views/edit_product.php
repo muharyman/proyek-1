@@ -11,7 +11,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="add_product.css">
+    <link rel="stylesheet" href="assets/css/add_product.css">
 </head>
 <body>
     <header>
@@ -48,51 +48,72 @@
             <div class="row">
                 <div class="col-sm-10"><h1>EDIT PRODUCT</h1></div>
             </div>
-            <div class="row">
-                <div class="col-sm-3"><!--left col-->
-                    <div class="text-center">
-                        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                        <h6>Upload a different photo...</h6>
-                        <input type="file" class="text-center center-block file-upload">
-                    </div>
-                </div><br><!--col-sm-3-->
-                <div class="col-sm-9">
-                    <hr>
-                    <form class="form" action="##" method="post" id="addForm">
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="product_name"><h4>Nama Produk</h4></label>
-                                <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Nama Produk">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="harga_sewa"><h4>Harga Sewa</h4></label>
-                                <input type="text" class="form-control" name="harga_sewa" id="harga_sewa" placeholder="harga sewa">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="stok_barang"><h4>Stok Barang</h4></label>
-                                <input type="text" class="form-control" name="stok" id="stok">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="deskripsi"><h4>Deskripsi</h4></label>
-                                <input type="textarea" class="form-control" name="deskripsi" id="deskripsi">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                                <div class="col-xs-12">
-                                    <br>
-                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button>
-                                    <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> EDIT</button>
-                                </div>
-                        </div>
-                    </form>
-                </div><!--col-sm-9-->
-            </div><!--row-->
+            <?php
+                include('db/api/get_product.php');
+
+                // Get and check get request (id)
+                $id = (int)$_GET["id"];
+                if ($id) {
+                    $product = getProduct($id);
+                }
+                else {
+                    $product = getProduct(1);
+                }
+                
+                // Check if the product with given id is exist
+                if ($product) {
+                    echo '
+                        <form class="form" action="db/api/update_product.php" method="post" id="addForm" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-sm-3"><!--left col-->
+                                    <div class="text-center">
+                                        <img src="'.$product->image.'" class="avatar img-circle img-thumbnail" alt="avatar">
+                                        <h6>Upload a different photo...</h6>
+                                        <input type="file" name="image" class="text-center center-block file-upload">
+                                    </div>
+                                </div><br><!--col-sm-3-->
+                                <div class="col-sm-9">
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="product_name"><h4>Nama Produk</h4></label>
+                                            <input type="text" class="form-control" value="'.$product->name.'" name="name" id="product_name" placeholder="Nama Produk">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="harga_sewa"><h4>Harga Sewa</h4></label>
+                                            <input type="text" class="form-control" value="'.$product->cost.'" name="cost" id="harga_sewa" placeholder="harga sewa">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="stok_barang"><h4>Stok Barang</h4></label>
+                                            <input type="text" class="form-control" value="'.$product->stock.'" name="stock" id="stok">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="deskripsi"><h4>Deskripsi</h4></label>
+                                            <input type="textarea" class="form-control" value="'.$product->description.'" name="description" id="deskripsi">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <br>
+                                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button>
+                                                <button class="btn btn-lg btn-success" name="submit" value='.$product->id.' type="submit"><i class="glyphicon glyphicon-ok-sign"></i> EDIT</button>
+                                            </div>
+                                    </div>
+                                </div><!--col-sm-9-->
+                            </div><!--row-->
+                        </form>
+                    ';
+                }
+                else {
+                    //header('Location: /products');
+                }
+            ?>
         </div>
 	</div>
 	<script src=""></script>

@@ -2,11 +2,11 @@
     // return object Product if exist, else return 0
     function getProduct($id) {
         include('db/db.php'); // now we have $db to communicate with database
-        include('Product.php');
+        include('db/model/Product.php');
 
         // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
         $ready = $db->prepare("select * from products where id = ?");
-        $ready->bind_param('s', $id);
+        $ready->bind_param('d', $id);
         $ready->execute();
         
         // Get the result of execution
@@ -14,15 +14,17 @@
 
         // Check whether the product is exist or not
         if (mysqli_num_rows($row)) {
+            $a = $row->fetch_assoc();
+
             // return an object Product
             return new Product(
-                $row["id"],
-                $row["name"],
-                $row["description"],
-                $row["stock"],
-                $row["image"],
-                $row["time"],
-                $row["cost"]
+                $id,
+                $a["name"],
+                $a["description"],
+                $a["stock"],
+                $a["image"],
+                $a["time"],
+                $a["cost"]
             );
         }
         else {
