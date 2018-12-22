@@ -1,0 +1,19 @@
+
+.item-photo{display:flex;justify-content:center;align-items:center;border-right:1px solid #f6f6f6;}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+    background: white;
+    color:gray;
+    border:1px solid gray; 
+}
+
+body{
+    overflow-x: hidden;
+}
+
+img{
+    cursor: zoom-in;
+}
+
+.product_view .modal-dialog{max-width: 800px; width: 100%;}
