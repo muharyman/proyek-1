@@ -34,9 +34,6 @@
                         <li class="nav-item col-2">
                             <a class="nav-link" href="#">Product</a>
                         </li>
-                        <li class="nav-item col-2">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -87,7 +84,9 @@
                         <div class="form-group">
                                 <div class="col-xs-12">
                                     <br>
-                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                    <!--Menuju ke Produk-->
+                                    <a href=""><button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button></a>
+                                    <!-- Menuju ke Produk -->
                                     <button class="btn btn-lg btn-success" type="submit" name="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button>
                                 </div>
                         </div>

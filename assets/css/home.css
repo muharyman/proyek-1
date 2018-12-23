@@ -19,11 +19,6 @@ i{
     padding-right:3vw;
 }
 
-/*====NAVBAR=====*/
-.topnav a:hover {
-    border-bottom: 3px solid red;
-}
-
 /*FOOTER*/
 footer{
     font-weight:300;
@@ -164,4 +159,16 @@ footer{
 
 .slide img{
     border: 1px solid gray;
+}
+
+.copyright{
+    height: 30px;
+}
+
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+    background: white;
+    color:gray;
+    border:1px solid gray; 
 }

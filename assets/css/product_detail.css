@@ -16,4 +16,4 @@ img{
     cursor: zoom-in;
 }
 
-.product_view .modal-dialog{max-width: 800px; width: 100%;}
+.product_view .modal-dialog{max-width: 100px; width: 60%;}
