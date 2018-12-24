@@ -36,9 +36,6 @@
 						<li class="nav-item col-2 active">
 							<a class="nav-link" href="#">Product<span class="sr-only">(current)</span></a>
 						</li>
-						<li class="nav-item col-3">
-							<a class="nav-link" href="#">Contact Us</a>
-						</li>
 					</ul>
 
 					<form action="#" method="post" class="form-inline my-2 mylg-0">
@@ -51,16 +48,8 @@
 	</header><br>
 	<!--SUB JUDUL-->
 	<div class="row">
-		<div class="col-sm-10 align-content-center text-center container-fluid">
+		<div class="col-sm-12 align-content-center text-center container-fluid">
 			<h5 class="h3">PRODUK</h3>
-		</div>
-		<!-- Hanya Jika Nilai cookies true-->
-		<div class="col-sm-2">
-			<div class="container-fluid">
-				<div class="tombol">
-					<a href=""><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button></a>
-				</div>
-			</div>
 		</div>
 	</div><hr>
 
@@ -87,11 +76,6 @@
 							<img class="pic-1" src="../assets/images/HT1.png">
 							<img class="pic-2" src="../assets/images/HT2.png">
 						</a>
-						<!-- KHUSUS ADMIN LINE 88-92 -->
-						<ul class="modify">
-							<li><a href="#" class="edit_produt" data-tip="edit"><img src="../assets/images/pencil.png"></a></li>
-							<li><a href="#" class="delete" data-tip="delete"><img src="../assets/images/eraser.png"></a></li>
-						</ul>
 						<a class="detail" href="">Detail</a>
 					</div>
 					<div class="product-content">
