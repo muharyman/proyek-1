@@ -93,7 +93,7 @@
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="product_name"><h4>Nama Produk</h4></label>
-                                            <input type="text" class="form-control" name="product_name" id="name" placeholder="Nama Produk" value="'.$product->name.'">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nama Produk" value="'.$product->name.'">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -105,7 +105,7 @@
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="deskripsi"><h4>Spesifikasi</h4></label>
-                                            <textarea name="description" class="form-control" id="deskripsi" style="resize: none" rows="5" cols="55" value="'.$product->description.'"></textarea>
+                                            <textarea name="description" class="form-control" id="deskripsi" style="resize: none" rows="5" cols="55">'.$product->description.'</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -114,7 +114,7 @@
                                                 <!-- Menuju ke Produk-->
                                                 <a href="/products"><button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button></a>
                                                 <!--Menuju ke Produk Detail -->
-                                                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> SAVE</button>
+                                                <button class="btn btn-lg btn-success" name="submit" type="submit" value="'.$_GET["id"].'"><i class="glyphicon glyphicon-ok-sign"></i> SAVE</button>
                                             </div>
                                     </div>
                                 </div><!--col-sm-9-->

@@ -35,7 +35,7 @@
         if ($file_size1 > 0) {
             $image1 = 'assets/images/a' . $upload_time . '.' . $file_extension1;
             $upload_path = explode('db/api', getcwd())[0] . $image1;
-            $did_upload = $did_upload + move_uploaded_file($upload_tmp, $upload_path);
+            $did_upload = $did_upload + move_uploaded_file($upload_tmp1, $upload_path);
         }
         else {
             $image1 = '.';
@@ -45,7 +45,7 @@
         if ($file_size2 > 0) {
             $image2 = 'assets/images/b' . $upload_time . '.' . $file_extension2;
             $upload_path = explode('db/api', getcwd())[0] . $image2;
-            $did_upload = $did_upload + move_uploaded_file($upload_tmp, $upload_path);
+            $did_upload = $did_upload + move_uploaded_file($upload_tmp2, $upload_path);
         }
         else {
             $image2 = '.';
@@ -55,7 +55,7 @@
         if ($file_size3 > 0) {
             $image3 = 'assets/images/c' . $upload_time . '.' . $file_extension3;
             $upload_path = explode('db/api', getcwd())[0] . $image3;
-            $did_upload = $did_upload + move_uploaded_file($upload_tmp, $upload_path);
+            $did_upload = $did_upload + move_uploaded_file($upload_tmp3, $upload_path);
         }
         else {
             $image3 = '.';
@@ -65,8 +65,8 @@
 
         if ($did_upload) {
             // Insert product info to database
-            $ready = $db->prepare("insert into products (name, description, image, cost) values (?, ?, ?, ?, ?)");
-            $ready->bind_param('ssdsd', $name, $description, $image, $cost);
+            $ready = $db->prepare("insert into products (name, description, image, cost) values (?, ?, ?, ?)");
+            $ready->bind_param('sssd', $name, $description, $image, $cost);
             $ready->execute();
 
             header('Location: /products');

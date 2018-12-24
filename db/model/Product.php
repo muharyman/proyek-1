@@ -14,9 +14,9 @@
             $this->id = $id;
             $this->name = $name;
             $this->description = $description;
-            $this->image = $image1;
-            $this->image = $image2;
-            $this->image = $image3;
+            $this->image1 = $image1;
+            $this->image2 = $image2;
+            $this->image3 = $image3;
             $this->time = $time;
             $this->cost = $cost;
         }
