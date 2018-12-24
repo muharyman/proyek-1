@@ -10,12 +10,20 @@
         $products = array();
 
         while($row = $get_products->fetch_assoc()) {
+
+            $images = explode(';', $row["image"]);
+
+            $image1 = $images[0];
+            $image2 = $images[1];
+            $image3 = $images[2];
+
             array_push($orders, new Product(
                 $row["id"],
                 $row["name"],
                 $row["description"],
-                $row["stock"],
-                $row["image"],
+                $image1,
+                $image2,
+                $image3,
                 $row["time"],
                 $row["cost"])
             );
