@@ -10,6 +10,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../assets/css/products.css">
 </head>
 <body>
@@ -85,6 +86,11 @@
 							<img class="pic-1" src="../assets/images/HT1.png">
 							<img class="pic-2" src="../assets/images/HT2.png">
 						</a>
+						<!-- KHUSUS ADMIN LINE 88-92 -->
+						<ul class="modify">
+							<li><a href="#" class="edit_produt" data-tip="edit"><img class="pencil" src="../assets/images/pencil.svg"></a></li>
+							<li><a href="#" class="delete" data-tip="delete"><img class="eraser" src="../assets/images/eraser.svg"></a></li>
+						</ul>
 						<a class="detail" href="">Detail</a>
 					</div>
 					<div class="product-content">
