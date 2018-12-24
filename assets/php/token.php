@@ -4,7 +4,7 @@
 function setToken($db, $username) {
     // Generate token
     $token = md5(uniqid(rand(), true));
-    $the_time = time() + 600;
+    $the_time = time() + 3600;
 
     // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
     $ready = $db->prepare("insert into admin_access (username, token, time) values (?, ?, ?)");

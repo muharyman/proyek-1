@@ -20,10 +20,10 @@
 		<div class="container-fluid">            
 			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<!--LOGO-->
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="/home">
 					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
-				<a class="navbar-brand" href="#">HT ENTE</a>
+				<a class="navbar-brand" href="/home">HT ENTE</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -31,14 +31,14 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav justify-content-end col-8 text-center">
 						<li class="nav-item col-2">
-							<a class="nav-link " href="#">Home</a>
+							<a class="nav-link " href="/home">Home</a>
 						</li>
 						<li class="nav-item col-2 active">
-							<a class="nav-link" href="#">Product<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="/products">Product<span class="sr-only">(current)</span></a>
 						</li>
 					</ul>
 
-					<form action="#" method="post" class="form-inline my-2 mylg-0">
+					<form action="/products" method="post" class="form-inline my-2 mylg-0">
 						<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search">
 						<button class="btn btn-outline-success" type="submit">search</button>
 					</form>
@@ -67,77 +67,39 @@
 	<!--LIST PRODUK-->
 	<!--DEFAULT TAMPILAN ITU 4 4 -->
 	<div class="container-fluid">
-		<div class="row">
-			<!-- Disini Cukup 2 gambar per produk jadi tinggal di query foto 1 dan 2-->
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT1.png">
-							<img class="pic-2" src="../assets/images/HT2.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
+		<?php
+			include('db/api/get_products.php');
+
+			$products = getProducts();
+			echo '
+				<div class="row">
+				<!-- Disini Cukup 2 gambar per produk jadi tinggal di query foto 1 dan 2-->
+			';
+			foreach ($products as $product) {
+				echo '
+						<div class="col-md-3 col-sm-6">
+							<div class="product-grid2">
+								<div class="product-image2">
+									<a href="#">
+										<img class="pic-1" src="'.$product->image1.'">
+										<img class="pic-2" src="'.$product->image2.'">
+									</a>
+									<a class="detail" href="">Detail</a>
+								</div>
+								<div class="product-content">
+									<a href="">	
+										<h3 class="title"><a href="#">HT 4</a></h3>
+										<span class="price">'.$product->cost.'</span>
+									</a>
+								</div>
+							</div>
+						</div>
+				';
+			}
+			echo '
 				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT3.png">
-							<img class="pic-2" src="../assets/images/HT4.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT5.png">
-							<img class="pic-2" src="../assets/images/HT6.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT7.png">
-							<img class="pic-2" src="../assets/images/HT8.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
+			';
+		?>
 	</div><hr>
 
 	<div class="container-fluid bg-dark">

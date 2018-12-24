@@ -2,7 +2,7 @@
     // return array of object Product
     function getProducts() {
         include('db/db.php'); // now we have $db to communicate with database
-        include('Product.php');
+        include('db/model/Product.php');
 
         // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
         $get_products = $db->query("select * from products");
@@ -17,7 +17,7 @@
             $image2 = $images[1];
             $image3 = $images[2];
 
-            array_push($orders, new Product(
+            array_push($products, new Product(
                 $row["id"],
                 $row["name"],
                 $row["description"],

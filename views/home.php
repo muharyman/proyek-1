@@ -110,8 +110,19 @@
 				<div class="foto-product">
 					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 						<section class="customer-logos slider">
-							<div class="slide"><a href="#"><img src="../assets/images/HT3.png"></a></div>
-							<div class="slide"><a href="#"><img src="../assets/images/HT3.png"></a></div>
+							<?php
+								include('db/api/get_products.php');
+
+								$products = getProducts();
+
+								foreach ($products as $product) {
+									echo '
+										<div class="slide"><a href="#"><img src="'.$product->image1.'"></a></div>
+										<div class="slide"><a href="#"><img src="'.$product->image2.'"></a></div>
+										<div class="slide"><a href="#"><img src="'.$product->image3.'"></a></div>
+									';
+								}
+							?>
 							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></a></div>
 							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></a></div>
 							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></a></div>
