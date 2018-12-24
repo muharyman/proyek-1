@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>HT ENTE</title>
+	<link rel="icon" href="../assets/images/logo.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -22,7 +23,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<!--LOGO-->
 				<a class="navbar-brand" href="#">
-					<img src="../assets/images/contoh.gif" alt="logo" style="width:40px;">
+					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
 				<a class="navbar-brand" href="#">HT ENTE</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
