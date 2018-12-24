@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 19, 2018 at 10:15 PM
+-- Generation Time: Dec 24, 2018 at 09:06 PM
 -- Server version: 5.7.24-0ubuntu0.18.04.1
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
@@ -55,7 +55,7 @@ CREATE TABLE `admin_access` (
 --
 
 INSERT INTO `admin_access` (`username`, `token`, `time`) VALUES
-('hamdi', '816c20dd757757f5c1e08ac7f55b08ef', 1545232027);
+('hamdi', '3a70e1b72e10986812c093506d3f8224', 1545609887);
 
 -- --------------------------------------------------------
 
@@ -66,8 +66,7 @@ INSERT INTO `admin_access` (`username`, `token`, `time`) VALUES
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `description` text NOT NULL,
-  `stock` int(11) NOT NULL,
+  `description` text,
   `image` varchar(255) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `cost` bigint(20) NOT NULL
@@ -97,7 +96,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
