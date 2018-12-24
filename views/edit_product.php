@@ -14,40 +14,43 @@
     <link rel="stylesheet" href="assets/css/add_product.css">
 </head>
 <body>
-    <header>
-        <div class="container1">            
-            <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-                <a class="navbar-brand" href="#">
-                    <img src="../assets/images/contoh.gif" alt="logo" style="width:40px;">
-                </a>
-                <a class="navbar-brand" href="#">HT ENTE</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav justify-content-end col-12 text-center">
-                        <li class="nav-item active col-2">
-                            <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item col-2">
-                            <a class="nav-link" href="#">Product</a>
-                        </li>
-                        <li class="nav-item col-2">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+<header>
+		<div class="container-fluid">            
+			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+				<!--LOGO-->
+				<a class="navbar-brand" href="#">
+					<img src="../assets/images/contoh.gif" alt="logo" style="width:40px;">
+				</a>
+				<a class="navbar-brand" href="#">HT ENTE</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+		
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav justify-content-end col-8 text-center">
+						<li class="nav-item col-2">
+							<a class="nav-link " href="/home">Home</a>
+						</li>
+						<li class="nav-item active  col-2">
+							<a class="nav-link" href="/products">Product<span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+
+					<form action="/products" method="post" class="form-inline my-2 mylg-0">
+						<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search">
+						<button class="btn btn-outline-success" type="submit">search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</header><br>
 
     <div class="add-form">
         <hr>
         <div class="container bootstrap snippet">
             <div class="row">
                 <div class="col-sm-10"><h1>EDIT PRODUCT</h1></div>
-            </div>
+            </div><hr>
             <?php
                 include('db/api/get_product.php');
 
@@ -66,47 +69,56 @@
                         <form class="form" action="db/api/update_product.php" method="post" id="addForm" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-sm-3"><!--left col-->
-                                    <div class="text-center">
-                                        <img src="'.$product->image.'" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    <!-- GAMBAR 1 wajib ada 2 dan 3 boleh kosong-->
+                                    <!--GAMBAR 1-->
+                                    <div class="text-left">
+                                        <img src="'.$product->image1.'" class="avatar img-circle img-thumbnail" alt="avatar">
                                         <h6>Upload a different photo...</h6>
-                                        <input type="file" name="image" class="text-center center-block file-upload">
+                                        <input type="file" name="image1" class="text-center center-block file-upload">
+                                    </div><br>
+                                    <!--GAMBAR 2-->
+                                    <div class="text-left">
+                                        <img src="'.$product->image2.'" class="avatar img-circle img-thumbnail" alt="avatar">
+                                        <h6>Upload a different photo...</h6>
+                                        <input type="file" name="image2" class="text-center center-block file-upload">
+                                    </div><br>
+                                    <!--GAMBAR 3-->
+                                    <div class="text-left">
+                                        <img src="'.$product->image3.'" class="avatar img-circle img-thumbnail" alt="avatar">
+                                        <h6>Upload a different photo...</h6>
+                                        <input type="file" name="image3" class="text-center center-block file-upload">
                                     </div>
                                 </div><br><!--col-sm-3-->
                                 <div class="col-sm-9">
-                                    <hr>
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="product_name"><h4>Nama Produk</h4></label>
-                                            <input type="text" class="form-control" value="'.$product->name.'" name="name" id="product_name" placeholder="Nama Produk">
+                                            <input type="text" class="form-control" name="product_name" id="name" placeholder="Nama Produk" value="'.$product->name.'">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="harga_sewa"><h4>Harga Sewa</h4></label>
-                                            <input type="text" class="form-control" value="'.$product->cost.'" name="cost" id="harga_sewa" placeholder="harga sewa">
+                                            <input type="text" class="form-control" name="cost" id="harga_sewa" placeholder="harga sewa" value="'.$product->cost.'">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-xs-6">
-                                            <label for="stok_barang"><h4>Stok Barang</h4></label>
-                                            <input type="text" class="form-control" value="'.$product->stock.'" name="stock" id="stok">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-xs-6">
-                                            <label for="deskripsi"><h4>Deskripsi</h4></label>
-                                            <input type="textarea" class="form-control" value="'.$product->description.'" name="description" id="deskripsi">
+                                            <label for="deskripsi"><h4>Spesifikasi</h4></label>
+                                            <textarea name="description" class="form-control" id="deskripsi" style="resize: none" rows="5" cols="55" value="'.$product->description.'"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                             <div class="col-xs-12">
                                                 <br>
-                                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button>
-                                                <button class="btn btn-lg btn-success" name="submit" value='.$product->id.' type="submit"><i class="glyphicon glyphicon-ok-sign"></i> EDIT</button>
+                                                <!-- Menuju ke Produk-->
+                                                <a href="/products"><button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button></a>
+                                                <!--Menuju ke Produk Detail -->
+                                                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> SAVE</button>
                                             </div>
                                     </div>
                                 </div><!--col-sm-9-->
-                            </div><!--row-->
+                            </div><!--row--> 
                         </form>
                     ';
                 }

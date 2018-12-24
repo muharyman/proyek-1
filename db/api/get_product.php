@@ -16,13 +16,20 @@
         if (mysqli_num_rows($row)) {
             $a = $row->fetch_assoc();
 
+            $images = explode(';', $a["image"]);
+
+            $image1 = $images[0];
+            $image2 = $images[1];
+            $image3 = $images[2];
+
             // return an object Product
             return new Product(
                 $id,
                 $a["name"],
                 $a["description"],
-                $a["stock"],
-                $a["image"],
+                $image1,
+                $image2,
+                $image3,
                 $a["time"],
                 $a["cost"]
             );
