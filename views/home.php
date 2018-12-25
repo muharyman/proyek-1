@@ -14,6 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 	<link rel="stylesheet" href="../assets/css/home.css">
 	<script src="assets/js/home.js"></script>
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 	
 </head>
 <body>
@@ -25,7 +26,7 @@
 				<a class="navbar-brand" href="/home">
 					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
-				<a class="navbar-brand" href="/home">HT ENTE</a>
+				<a class="navbar-brand" href="/home"><strong>HT ENTE</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -97,7 +98,6 @@
 		</div>
 	</div><br><br>
 <!--/CAROSEL-->
-
 	<div class="row">
 		<!--left col-->
 		<div class="col-sm-8">
@@ -151,10 +151,9 @@
 						<h2 class="tulisan text-left">Contact Us</h2><hr>
 					</div>
 			   <div class="isi">
-					<h5><i class="fa fa-envelope fa-1x"></i> E-Mail : info@gmail.com</h5>
+					<p><i class="fa fa-envelope fa-1x"></i> E-Mail : info@gmail.com</p>
 					<br />
-					<br />
-					<h5><i class="fa fa-phone fa-1x"></i> Contact Person : 081376201449 - Reihard Raymond </h5>
+					<p><i class="fa fa-phone fa-1x"></i> Contact Person : 081376201449 - Reihard Raymond </p>
 					<br />
 					<br />
 				</div>
@@ -172,15 +171,11 @@
 		   </div> 
 		</div>
 	</div>
-	
 	<!-- FOOTER -->
 	<div class="container-fluid bg-dark">
 		<div class="row copyright align-self-end">
-			<div class="col-xs-4">
-				<footer class="text-left">&copy;Copyright 2018 HT ENTE</footer>
-			</div>
+			<div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
 		</div>
 	</div>
-
 </body>
 </html>

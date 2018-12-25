@@ -12,18 +12,4 @@ body{
     overflow-x: hidden;
 }
 
-img{
-    cursor: zoom-in;
-}
-
-.pemesanan{
-}
-
 .product_view .modal-dialog{max-width: 100px; width: 60%;}
-
-.copyright{
-    clear: both;
-    position: relative;
-    height: 40px;
-    margin-top: -40px;
-}

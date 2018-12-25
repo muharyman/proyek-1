@@ -8,11 +8,14 @@
 	<title>HT ENTE</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/images/logo.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/add_product.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 </head>
 <body>
     <header>
@@ -20,9 +23,9 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<!--LOGO-->
 				<a class="navbar-brand" href="/admin">
-					<img src="../assets/images/contoh.gif" alt="logo" style="width:40px;">
+					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
-				<a class="navbar-brand" href="/admin">HT ENTE</a>
+				<a class="navbar-brand" href="/admin"><strong>HT ENTE</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -50,7 +53,7 @@
         <hr>
         <div class="container bootstrap snippet">
             <div class="row">
-                <div class="col-sm-10"><h1>ADD PRODUCT</h1></div>
+                <div class="col-sm-10"><h1><b>ADD PRODUCT</b></h1></div>
             </div><hr>
             <form class="form" action="db/api/post_product.php" method="post" id="addForm" enctype="multipart/form-data">
                 <div class="row">
@@ -103,6 +106,12 @@
             </form>
         </div>
 	</div>
-	<script src=""></script>
+        <!-- FOOTER -->
+    <div class="container-fluid bg-dark">
+        <div class="row copyright align-self-end">
+            <div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
+        </div>
+    </div>
+
 </body>
 </html>
