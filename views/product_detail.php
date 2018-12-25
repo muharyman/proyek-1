@@ -46,9 +46,9 @@
 						</li>
 					</ul>
 
-					<form action="#" method="post" class="form-inline my-2 mylg-0">
+					<form action="/search" method="post" class="form-inline my-2 mylg-0">
 						<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search">
-						<button class="btn btn-outline-success" type="submit">search</button>
+						<button class="btn btn-outline-success" type="submit" name="submit">search</button>
 					</form>
 				</div>
 			</nav>
