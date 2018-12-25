@@ -1,5 +1,8 @@
 body{
+    overflow-x: hidden;
+    font-family: Comfortaa;
     height: 100vh;
+    background-image: url("../images/background.png");
 }
 .add-form {
     width: 95%px;
@@ -22,10 +25,27 @@ body{
     color:gray;
     border:1px solid gray; 
 }
-
+.copyright{
+    height: 30px;
+}
 .gambar{
     padding-bottom: 10px;
 }
+
+/* =======FONT ======== */
+h5{
+    line-height:20%;
+}
+i{
+    line-height:6%;
+    color:#6B747D;
+}
+
+.content{
+    height: 178%;
+}
+
+/*FOOTER*/
 footer{
     font-weight:300;
     color: white;
@@ -35,4 +55,10 @@ footer{
     left: 0;
     padding: 1rem;
     text-align: left;
+    height: 50px;
+    margin-top: -50px;
 }
+strong{
+    color: white;
+}
+

@@ -14,7 +14,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/add_product.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
-    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 <header>
@@ -116,7 +115,7 @@
                                             <div class="col-xs-12">
                                                 <br>
                                                 <!-- Menuju ke Produk-->
-                                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i><a href="/admin">CANCEL</a></button></a>
+                                                <button class="btn btn-lg" type="reset" onclick="location.href=\'/admin\'"><i class="glyphicon glyphicon-repeat"></i>CANCEL</button>
                                                 <!--Menuju ke Produk Detail -->
                                                 <button class="btn btn-lg btn-success" name="submit" type="submit" value="'.$_GET["id"].'"><i class="glyphicon glyphicon-ok-sign"></i> SAVE</button>
                                             </div>

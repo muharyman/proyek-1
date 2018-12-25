@@ -123,11 +123,6 @@
 									';
 								}
 							?>
-							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></a></div>
-							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></a></div>
-							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></a></div>
-							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></a></div>
-							<div class="slide"><a href="#"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></a></div>
 						</section>
 					</div>
 				</div>
@@ -151,9 +146,9 @@
 						<h2 class="tulisan text-left">Contact Us</h2><hr>
 					</div>
 			   <div class="isi">
-					<p><i class="fa fa-envelope fa-1x"></i> E-Mail : info@gmail.com</p>
+					<p><i class="fa fa-envelope fa-1x"></i>E-Mail : htsewa068@gmail.com</p>
 					<br />
-					<p><i class="fa fa-phone fa-1x"></i> Contact Person : 081376201449 - Reihard Raymond </p>
+					<p><i class="fa fa-phone fa-1x"></i> CP : 081376201449 - Reihard Raymond </p>
 					<br />
 					<br />
 				</div>

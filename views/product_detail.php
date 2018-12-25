@@ -76,11 +76,17 @@
 					</ol>
 					<?php
 						echo '
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img class="d-block w-100" src="'.$product->image1.'" style="max-width:100%" alt="...">
-								</div>
-							</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="'.$product->image1.'" style="max-width:100%" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="'.$product->image2.'" style="max-width:100% alt="...">
+						</div>
+						<div class="carousel-item">
+							<img  class="d-block w-100" src="'.$product->image3.'" style="max-width:100% alt="...">
+						</div>
+					</div>
 						';
 					?>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -103,9 +109,9 @@
 					echo '
 						<div class="product_name">
 							<h2 class="tulisan text-left">'.$product->name.'</h2><hr>
-						</div><br>
+						</div>
 						<div class="harga">
-							<p class="tulisan text-justify">'.$product->cost.'</p>
+							<p class="tulisan text-justify">Harga : Rp '.$product->cost.'</p>
 						</div>
 						<div class="spesifikasi">
 							<p class="tulisan text-justify">Spefikasi</p>

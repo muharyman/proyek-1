@@ -11,7 +11,7 @@ body{
 }
 
 /*=========LIST OF PRODUCT============*/
-h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
+h3.title{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;font-family: Comfortaa}
 
 .demo{padding:45px 0}
 .product-grid2{font-family:'Open Sans',sans-serif;position:relative}

@@ -14,7 +14,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/add_product.css">
-    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 </head>
 <body>
@@ -97,7 +96,7 @@
                         <div class="form-group">
                                 <div class="col-xs-12">
                                     <br>
-                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i><a href="/admin">CANCEL</a></button>
+                                    <button class="btn btn-lg" type="reset" onclick="location.href='/admin'"><i class="glyphicon glyphicon-repeat"></i>CANCEL</button>
                                     <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button>
                                 </div>
                         </div>

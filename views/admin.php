@@ -82,7 +82,7 @@
 						<div class="col-md-3 col-sm-6">
 							<div class="product-grid2">
 								<div class="product-image2">
-									<a href="#">
+									<a href="/detail?id='.$product->id.'">
 										<img class="pic-1" src="'.$product->image1.'">
 										<img class="pic-2" src="'.$product->image2.'">
 									</a>
@@ -95,7 +95,7 @@
 								<div class="product-content">
 									<a href="">	
 										<h3 class="title"><a href="/editproduct?id='.$product->id.'">'.$product->name.'</a></h3>
-										<span class="price">'.$product->cost.'</span>
+										<span class="price">Rp '.$product->cost.'</span>
 									</a>
 								</div>
 							</div>
