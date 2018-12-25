@@ -96,13 +96,13 @@
 									</a>
 									<ul class="modify">
 										<li><a href="/editproduct?id='.$product->id.'" class="edit_produt" data-tip="edit"><img src="assets/images/pencil.png"></a></li>
-										<li><a href="#" class="delete" data-tip="delete"><img src="assets/images/eraser.png"></a></li>
+										<li><a href="/db/api/delete_product.php?id='.$product->id.'" class="delete" data-tip="delete"><img src="assets/images/eraser.png"></a></li>
 									</ul>
-									<a class="detail" href="/detail?id='.$product->id.'">Detail</a>
+									<a class="detail" href="/editproduct?id='.$product->id.'">Detail</a>
 								</div>
 								<div class="product-content">
 									<a href="">	
-										<h3 class="title"><a href="/detail?id='.$product->id.'">'.$product->name.'</a></h3>
+										<h3 class="title"><a href="/editproduct?id='.$product->id.'">'.$product->name.'</a></h3>
 										<span class="price">'.$product->cost.'</span>
 									</a>
 								</div>

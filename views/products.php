@@ -84,11 +84,11 @@
 										<img class="pic-1" src="'.$product->image1.'">
 										<img class="pic-2" src="'.$product->image2.'">
 									</a>
-									<a class="detail" href="">Detail</a>
+									<a class="detail" href="/detail?id='.$product->id.'">Detail</a>
 								</div>
 								<div class="product-content">
 									<a href="">	
-										<h3 class="title"><a href="#">HT 4</a></h3>
+										<h3 class="title"><a href="/detail?id='.$product->id.'">HT 4</a></h3>
 										<span class="price">'.$product->cost.'</span>
 									</a>
 								</div>
