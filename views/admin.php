@@ -24,10 +24,10 @@
 		<div class="container-fluid">            
 			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<!--LOGO-->
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="/admin">
 					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
-				<a class="navbar-brand" href="#">HT ENTE</a>
+				<a class="navbar-brand" href="/admin">HT ENTE</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -95,14 +95,14 @@
 										<img class="pic-2" src="'.$product->image2.'">
 									</a>
 									<ul class="modify">
-										<li><a href="/editproduct?id='.$product->id.'" class="edit_produt" data-tip="edit"><img src="../assets/images/pencil.png"></a></li>
-										<li><a href="#" class="delete" data-tip="delete"><img src="../assets/images/eraser.png"></a></li>
+										<li><a href="/editproduct?id='.$product->id.'" class="edit_produt" data-tip="edit"><img src="assets/images/pencil.png"></a></li>
+										<li><a href="#" class="delete" data-tip="delete"><img src="assets/images/eraser.png"></a></li>
 									</ul>
 									<a class="detail" href="/detail?id='.$product->id.'">Detail</a>
 								</div>
 								<div class="product-content">
 									<a href="">	
-										<h3 class="title"><a href="#">'.$product->name.'</a></h3>
+										<h3 class="title"><a href="/detail?id='.$product->id.'">'.$product->name.'</a></h3>
 										<span class="price">'.$product->cost.'</span>
 									</a>
 								</div>
