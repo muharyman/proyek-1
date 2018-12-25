@@ -12,4 +12,4 @@ body{
     overflow-x: hidden;
 }
 
-.product_view .modal-dialog{max-width: 100px; width: 60%;}
+.product_view .modal-dialog{max-width: 800px; width: 100%;}
