@@ -16,7 +16,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../assets/css/products.css">
+	<link rel="stylesheet" href="assets/css/products.css">
 </head>
 <body>
 	<!--NAVBAR-->
@@ -35,13 +35,10 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav justify-content-end col-8 text-center">
 						<li class="nav-item col-2">
-							<a class="nav-link " href="#">Home</a>
+							<a class="nav-link " href="/home">Home</a>
 						</li>
 						<li class="nav-item col-2 active">
-							<a class="nav-link" href="#">Product<span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item col-3">
-							<a class="nav-link" href="#">Contact Us</a>
+							<a class="nav-link" href="/products">Product<span class="sr-only">(current)</span></a>
 						</li>
 					</ul>
 
@@ -58,11 +55,10 @@
 		<div class="col-sm-10 align-content-center text-center container-fluid">
 			<h5 class="h3">PRODUK</h3>
 		</div>
-		<!-- Hanya Jika Nilai cookies true-->
 		<div class="col-sm-2">
 			<div class="container-fluid">
 				<div class="tombol">
-					<a href=""><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button></a>
+					<a href="/addproduct"><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button></a>
 				</div>
 			</div>
 		</div>
@@ -84,79 +80,37 @@
 	<div class="container-fluid">
 		<div class="row">
 			<!-- Disini Cukup 2 gambar per produk jadi tinggal di query foto 1 dan 2-->
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT1.png">
-							<img class="pic-2" src="../assets/images/HT2.png">
-						</a>
-						<!-- KHUSUS ADMIN LINE 88-92 -->
-						<ul class="modify">
-							<li><a href="#" class="edit_produt" data-tip="edit"><img src="../assets/images/pencil.png"></a></li>
-							<li><a href="#" class="delete" data-tip="delete"><img src="../assets/images/eraser.png"></a></li>
-						</ul>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT3.png">
-							<img class="pic-2" src="../assets/images/HT4.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT5.png">
-							<img class="pic-2" src="../assets/images/HT6.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<div class="product-grid2">
-					<div class="product-image2">
-						<a href="#">
-							<img class="pic-1" src="../assets/images/HT7.png">
-							<img class="pic-2" src="../assets/images/HT8.png">
-						</a>
-						<a class="detail" href="">Detail</a>
-					</div>
-					<div class="product-content">
-						<a href="">	
-							<h3 class="title"><a href="#">HT 4</a></h3>
-							<span class="price">$599.99</span>
-						</a>
-					</div>
-				</div>
-			</div>
+			<?php
+				include('db/api/get_products.php');
+
+				$products = getProducts();
+
+				foreach ($products as $product) {
+					echo '
+						<div class="col-md-3 col-sm-6">
+							<div class="product-grid2">
+								<div class="product-image2">
+									<a href="#">
+										<img class="pic-1" src="'.$product->image1.'">
+										<img class="pic-2" src="'.$product->image2.'">
+									</a>
+									<ul class="modify">
+										<li><a href="/editproduct?id='.$product->id.'" class="edit_produt" data-tip="edit"><img src="../assets/images/pencil.png"></a></li>
+										<li><a href="#" class="delete" data-tip="delete"><img src="../assets/images/eraser.png"></a></li>
+									</ul>
+									<a class="detail" href="/detail?id='.$product->id.'">Detail</a>
+								</div>
+								<div class="product-content">
+									<a href="">	
+										<h3 class="title"><a href="#">'.$product->name.'</a></h3>
+										<span class="price">'.$product->cost.'</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					';
+				}
+			?>
 		</div>
 	</div><hr>
 
