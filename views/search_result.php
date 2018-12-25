@@ -1,9 +1,9 @@
 <?php
     include('db/api/get_search.php');
 
-    $key = $_POST["submit"];
+    $key = $_POST["search"];
 
-    $products = getSearch($key);
+	$products = getSearch($key);
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +62,7 @@
 			<h3 style="margin-left: 15px;"><b>Result</b></h3>
 		</div>
 		<div class="col-sm-4 align-content-center container-fluid">
-			<h5 style="padding-left: 10px; padding-top: 20px;"><b>Found 1(x)<!--INI HASILNYA--></b></h5>
+			<h5 style="padding-left: 10px; padding-top: 20px;"><b>Found <?php echo sizeof($products); ?>(x)</b></h5>
 		</div>
 	</div><hr>
 
