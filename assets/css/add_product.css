@@ -1,3 +1,6 @@
+body{
+    height: 100vh;
+}
 .add-form {
     width: 95%px;
     margin: 50px auto;
@@ -22,4 +25,14 @@
 
 .gambar{
     padding-bottom: 10px;
+}
+footer{
+    font-weight:300;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: left;
 }
