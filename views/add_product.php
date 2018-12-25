@@ -97,7 +97,7 @@
                         <div class="form-group">
                                 <div class="col-xs-12">
                                     <br>
-                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button>
+                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i><a href="/admin">CANCEL</a></button>
                                     <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button>
                                 </div>
                         </div>

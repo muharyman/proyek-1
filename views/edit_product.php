@@ -116,7 +116,7 @@
                                             <div class="col-xs-12">
                                                 <br>
                                                 <!-- Menuju ke Produk-->
-                                                <a href="/products"><button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> CANCEL</button></a>
+                                                <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i><a href="/admin">CANCEL</a></button></a>
                                                 <!--Menuju ke Produk Detail -->
                                                 <button class="btn btn-lg btn-success" name="submit" type="submit" value="'.$_GET["id"].'"><i class="glyphicon glyphicon-ok-sign"></i> SAVE</button>
                                             </div>

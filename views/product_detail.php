@@ -102,15 +102,12 @@
 				<?php
 					echo '
 						<div class="product_name">
-							<!--ECHO kan Nama Barangnya -->
 							<h2 class="tulisan text-left">'.$product->name.'</h2><hr>
 						</div><br>
 						<div class="harga">
-							<!--ECHO kan Harga Barangnya -->
 							<p class="tulisan text-justify">'.$product->cost.'</p>
 						</div>
 						<div class="spesifikasi">
-							<!--ECHO Spesifikasi dengan di parsing -->
 							<p class="tulisan text-justify">Spefikasi</p>
 							<div class="isi">
 								<pre>'.$product->description.'</pre>

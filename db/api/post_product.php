@@ -69,7 +69,7 @@
             $ready->bind_param('sssd', $name, $description, $image, $cost);
             $ready->execute();
 
-            header('Location: /products');
+            header('Location: /admin');
         }
         else {
             header('Location: /addproduct');

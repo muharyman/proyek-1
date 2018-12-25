@@ -102,7 +102,7 @@
                 $ready->execute();
             }
 
-            header('Location: /products');
+            header('Location: /admin');
         }
         else {
             header('Location: /editproduct');
