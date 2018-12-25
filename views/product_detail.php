@@ -1,7 +1,7 @@
 <?php
-    include('db/api/get_product.php');
+	include('db/api/get_product.php');
 
-    $product = getProduct($_GET["id"]);
+	$product = getProduct($_GET["id"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,15 +74,15 @@
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					</ol>
-                    <?php
-                        echo '
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="'.$product->image1.'" style="max-width:100%" alt="...">
-                                </div>
-                            </div>
-                        ';
-                    ?>
+					<?php
+						echo '
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img class="d-block w-100" src="'.$product->image1.'" style="max-width:100%" alt="...">
+								</div>
+							</div>
+						';
+					?>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
@@ -99,25 +99,25 @@
 		<div class="col-sm-5">
 			<!--DESKRIPSI-->
 			<div class="container-fluid">
-                <?php
-                    echo '
-                        <div class="product_name">
-                            <!--ECHO kan Nama Barangnya -->
-                            <h2 class="tulisan text-left">'.$product->name.'</h2><hr>
-                        </div><br>
-                        <div class="harga">
-                            <!--ECHO kan Harga Barangnya -->
-                            <p class="tulisan text-justify">'.$product->cost.'</p>
-                        </div>
-                        <div class="spesifikasi">
-                            <!--ECHO Spesifikasi dengan di parsing -->
-                            <p class="tulisan text-justify">Spefikasi</p>
-                            <div class="isi">
-                                <pre>'.$product->description.'</pre>
-                            </div>
-                        </div><br>
-                    ';
-                ?>
+				<?php
+					echo '
+						<div class="product_name">
+							<!--ECHO kan Nama Barangnya -->
+							<h2 class="tulisan text-left">'.$product->name.'</h2><hr>
+						</div><br>
+						<div class="harga">
+							<!--ECHO kan Harga Barangnya -->
+							<p class="tulisan text-justify">'.$product->cost.'</p>
+						</div>
+						<div class="spesifikasi">
+							<!--ECHO Spesifikasi dengan di parsing -->
+							<p class="tulisan text-justify">Spefikasi</p>
+							<div class="isi">
+								<pre>'.$product->description.'</pre>
+							</div>
+						</div><br>
+					';
+				?>
 				<div class="row">
 					<!--UNTUK USER-->
 					<div class="col-sm-12">
@@ -175,20 +175,20 @@
 					</div>
 					<div class="col-md-11 content">
 						<div class="pesan text-center">
-							<a href="https://wa.me/6281362020369" target="_blank"><button class="btn btn-lg btn-success"><i class="glyphicon glyphicon-ok-sign"></i>PESAN</button></a>
+							<a href="https://wa.me/6281362020369" target="_blank"><button class="btn btn-lg btn-success"><i class="glyphicon glyphicon-ok-sign"></i> PESAN</button></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div><br><br>
+	</div>
 </div>
 	<!-- FOOTER -->
-    <div class="container-fluid bg-dark">
-        <div class="row copyright align-self-end">
-            <div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
-        </div>
-    </div>
-    
+	<div class="container-fluid bg-dark">
+		<div class="row copyright align-self-end">
+			<div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
+		</div>
+	</div>
+	
 </body>
 </html>
