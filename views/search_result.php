@@ -1,5 +1,9 @@
 <?php
-    include('assets/php/checkauth.php');
+    include('db/api/get_search.php');
+
+    $key = $_GET["key"];
+
+    $products = getSearch($key);
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +21,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/products.css">
-	<link rel="stylesheet" href="assets/css/home.css">
+	<link rel="stylesheet" href="../assets/css/home.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 </head>
 <body>
@@ -26,10 +30,10 @@
 		<div class="container-fluid">            
 			<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<!--LOGO-->
-				<a class="navbar-brand" href="/admin">
+				<a class="navbar-brand" href="/home">
 					<img src="../assets/images/logo.png" alt="logo" style="width:40px;">
 				</a>
-				<a class="navbar-brand" href="/admin"><strong>HT ENTE</strong></a>
+				<a class="navbar-brand" href="/home"><strong>HT ENTE</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -44,7 +48,7 @@
 						</li>
 					</ul>
 
-					<form action="#" method="post" class="form-inline my-2 mylg-0">
+					<form action="/products" method="post" class="form-inline my-2 mylg-0">
 						<input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="search" aria-label="search">
 						<button class="btn btn-outline-success" type="submit">search</button>
 					</form>
@@ -54,64 +58,55 @@
 	</header><br>
 	<!--SUB JUDUL-->
 	<div class="row">
-		<div class="col-sm-10 align-content-center text-center container-fluid">
-			<h3 class="h3"><b>PRODUCT</b></h3>
+		<div class="col-sm-8 align-content-center text-left container-fluid">
+			<h3 style="margin-left: 15px;"><b>Result</b></h3>
 		</div>
-		<div class="col-sm-2">
-			<div class="container-fluid">
-				<div class="tombol">
-					<a href="/addproduct"><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> ADD</button></a>
-				</div>
-			</div>
+		<div class="col-sm-4 align-content-center container-fluid">
+			<h5 style="padding-left: 10px; padding-top: 20px;"><b>Found 1(x)<!--INI HASILNYA--></b></h5>
 		</div>
 	</div><hr>
+
 
 <div class="content">
 	<!--LIST PRODUK-->
 	<!--DEFAULT TAMPILAN ITU 4 4 -->
 	<div class="container-fluid">
 		<div class="row">
-			<!-- Disini Cukup 2 gambar per produk jadi tinggal di query foto 1 dan 2-->
-			<?php
-				include('db/api/get_products.php');
-
-				$products = getProducts();
-
-				foreach ($products as $product) {
-					echo '
-						<div class="col-md-3 col-sm-6">
-							<div class="product-grid2">
-								<div class="product-image2">
-									<a href="#">
-										<img class="pic-1" src="'.$product->image1.'">
-										<img class="pic-2" src="'.$product->image2.'">
-									</a>
-									<ul class="modify">
-										<li><a href="/editproduct?id='.$product->id.'" class="edit_produt" data-tip="edit"><img src="assets/images/pencil.png"></a></li>
-										<li><a href="/db/api/delete_product.php?id='.$product->id.'" class="delete" data-tip="delete"><img src="assets/images/eraser.png"></a></li>
-									</ul>
-									<a class="detail" href="/detail?id='.$product->id.'">Detail</a>
-								</div>
-								<div class="product-content">
-									<a href="">	
-										<h3 class="title"><a href="/editproduct?id='.$product->id.'">'.$product->name.'</a></h3>
-										<span class="price">'.$product->cost.'</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					';
-				}
-			?>
+		<!-- Disini Cukup 2 gambar per produk jadi tinggal di query foto 1 dan 2-->
+            <?php
+                foreach ($products as $product) {
+                    echo '
+                        <div class="col-md-3 col-sm-6">
+                            <div class="product-grid2">
+                                <div class="product-image2">
+                                    <a href="/detail?id='.$product->id.'">
+                                        <img class="pic-1" src="'.$product->image1.'">
+                                        <img class="pic-2" src="'.$product->image2.'">
+                                    </a>
+                                    <a class="detail" href="/detail?id='.$product->id.'">Detail</a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="">	
+                                        <h3 class="title"><a href="/detail?id='.$product->id.'">'.$product->name.'</a></h3>
+                                        <span class="price">'.$product->cost.'</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    ';
+                }
+            ?>
 		</div>
 	</div><hr>
+
 </div>
-    <!-- FOOTER -->
-    <div class="container-fluid bg-dark">
-        <div class="row copyright align-self-end">
-            <div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
-        </div>
-    </div>
+
+	<!-- FOOTER -->
+	<div class="container-fluid bg-dark">
+		<div class="row copyright align-self-end">
+			<div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
+		</div>
+	</div>
 	
 </body>
 </html>

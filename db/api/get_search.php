@@ -1,10 +1,12 @@
 <?php
-    function getSearch($string) {
+    function getSearch($input) {
         include('db/db.php'); // now we have $db to communicate with database
         include('db/model/Product.php');
 
+        $string = $input;
+
         // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
-        $ready = $db->prepare("select * from products like %?%");
+        $ready = $db->prepare("select * from products where name like CONCAT('%',?,'%')");
         $ready->bind_param('s', $string);
         $ready->execute();
         

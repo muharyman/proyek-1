@@ -60,6 +60,14 @@ else if ($request[1] == 'products') {
 		header('Location: /products');
 	}
 }
+else if ($request[1] == 'search') {
+	if ($request[2] == '') {
+		include('views/search_result.php');
+	}
+	else {
+		header('Location: /products');
+	}
+}
 else {
 	header('Location: /home');
 }
