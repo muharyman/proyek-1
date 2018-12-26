@@ -21,6 +21,15 @@
 	<link rel="stylesheet" href="assets/css/product_detail.css">
 	<link rel="stylesheet" href="../assets/css/home.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131374777-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-131374777-1');
+	</script>
 
 </head>
 <body>
