@@ -102,7 +102,7 @@
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="harga_sewa"><h4>Harga Sewa</h4></label>
-                                            <input type="text" class="form-control" name="cost" id="harga_sewa" placeholder="harga sewa" value="'.$product->cost.'">
+                                            <input type="text" class="form-control" name="cost" id="harga_sewa" placeholder="harga sewa" value="'.$product->costx.'">
                                         </div>
                                     </div>
                                     <div class="form-group">

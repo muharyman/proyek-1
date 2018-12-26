@@ -18,7 +18,10 @@
             $this->image2 = $image2;
             $this->image3 = $image3;
             $this->time = $time;
-            $this->cost = $cost;
+            $this->costx = $cost;
+
+            $temp = strrev((string) $cost);
+            $this->cost = strrev(implode('.',(str_split($temp, 3))));
         }
     }
 
