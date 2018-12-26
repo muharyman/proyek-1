@@ -114,7 +114,7 @@
 							<p class="tulisan text-justify">Harga : Rp '.$product->cost.'</p>
 						</div>
 						<div class="spesifikasi">
-							<p class="tulisan text-justify">Spefikasi</p>
+							<p class="tulisan text-justify">Spesifikasi</p>
 							<div class="isi">
 								<pre>'.$product->description.'</pre>
 							</div>
@@ -150,17 +150,17 @@
 						</div>
 						<div class="aturan text-justify">
 							<ol>
-								<li>Pembayaran harus di bayar lunas sebelum waktu peminjaman, Jika transfer harus melakukan transfer sebelum Handy talky di bawa klien ke rekening <span class="pembayaran"><b>BCA a/n Muhammad Akbar Pramuditya  4372249742 </b></span></li>
-								<li>Apabila terjadi over time, maka akan di kenakan charge sesuai harga sewa normal (maksimal peminjaman 24 jam )</li>
-								<li>Kerusakan atau kehilangan terdapat 2 pilihan tanggung jawab yang wajib untuk di jalankan oleh peminjam :
+								<li>Pembayaran harus di bayar lunas sebelum waktu penyewaan. Pembayaran dapat dilakukan via langsung atau transfer ke rekening <span class="pembayaran"><b>BCA a/n Muhammad Akbar Pramuditya  4372249742 </b></span></li>
+								<li>Apabila terjadi over time, maka akan di kenakan charge sesuai harga sewa normal (maksimal penyewaan 24 jam)</li>
+								<li>Kerusakan atau kehilangan ditanggung oleh penyewa :
 									<ol type="a">
 										<li>Mengganti dengan spesifikasi yang sama (cari sendiri) dengan membayar denda ketidaklengkapan sebesar  25.000/Hari (Bukan Per Unit Tidak Lengkap)</li>
-										<li>mengganti uang berdasarkan nominal tertera pada pricelist <span class="kerusakan"><b>HT 500.000, Premium(sky_max / baofeng uv 5r) | Batrai 150.000 , | Headset 50.000, / beltclip 25.000 | Kerusakan & Kehilangan lain yang   tidak tercantum, harga menyesuaikan </b></span></li>
+										<li>Mengganti uang berdasarkan nominal tertera pada pricelist <span class="kerusakan"><b>HT 500.000, Premium(sky_max / baofeng uv 5r) | Batrai 150.000 , | Headset 50.000, / beltclip 25.000 | Kerusakan & Kehilangan lain yang   tidak tercantum, harga menyesuaikan </b></span></li>
 									</ol>
 								</li>
 								<li>Selama penyewaan tidak boleh memindahkan hak sewa kepada orang lain, jika di lakukan maka segala resiko yang timbul dari butir 1, 2, dan 3 akan menjadi tanggung jawab penyewa sepenuhnya</li>
 								<li>Apabila terjadi suatu pelanggaran atau terjadi penyitaan barang pinjaman, maka penyewa bertanggung jawab sepenuhnya</li>
-								<li>Peralatan yang hendak dipinjam harus di cek terlebih dahulu, jika sudah di tangan penyewa, segala ketentuan pertanggung jawaban berlaku, jika di temui suatu yang tidak sesuai, maka penyewa bertanggung jawab sepenuhnya.</li>
+								<li>Peralatan yang hendak dipinjam harap dicek terlebih dahulu kelengkapannya. Jika HT telah berada di tangan penyewa, maka segala bentuk kekurangan atau kerusakan menjadi tanggung jawab penyewa </li>
 							</ol>
 						</div>
 						<div class="aturan_penyewaan">
@@ -171,14 +171,14 @@
 								<li>Dapat menghubungi via WA / official akun line dari Hate Ente</li>
 								<li>Mengisi identitas dan tanggal serta lama menyewaan (sesuai format yang nnati diberikan)</li>
 								<li>Melampirkan foto ktp/sim/tanda pengenal lainnya</li>
-								<li>Apabila sudah mentransfer untuk dp,dapat menyirimkan bukti SC transfernya</li>
+								<li>Apabila sudah mentransfer untuk dp, dapat mengirimkan bukti SC transfernya</li>
 								<li>Untuk informasi lebih lanjut, dapat menghubungi via WA/official akun Hate Ente</li>
 							</ol>
 						</div>
 					</div>
 					<div class="col-md-11 content">
 						<div class="pesan text-center">
-							<a href="https://wa.me/6281362020369" target="_blank"><button class="btn btn-lg btn-success"><i class="glyphicon glyphicon-ok-sign"></i> PESAN</button></a>
+							<a href="https://wa.me/6281376201449" target="_blank"><button class="btn btn-lg btn-success"><i class="glyphicon glyphicon-ok-sign"></i> PESAN</button></a>
 						</div>
 					</div>
 				</div>

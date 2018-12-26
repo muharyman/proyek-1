@@ -50,8 +50,16 @@
 		</div>
 	</header><br>
 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+		<img src="../assets/images/htente.gif" class="d-block w-100" width="800" height="200">
+			</div>
+		</div>
+	</div><br>
+
 <!--CAROSEL-->
-	<div class="container-fluid">
+	<!-- <div class="container">
 		<div class="row">
 
 		</div>
@@ -62,7 +70,6 @@
 				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner">
-				<!--GAMBAR 1 nanti echo kan aja dari DB terserah yg mana -->
 				<div class="carousel-item active">
 					<img class="d-block w-100" src="../assets/images/home1.png" width="800" height="400" alt="...">
 					<div class="carousel-caption d-none d-md-block">
@@ -70,7 +77,6 @@
 						<p>...</p>
 					</div>
 				</div>
-				<!--GAMBAR 2 nanti echo kan aja dari DB terserah yg mana -->
 				<div class="carousel-item">
 					<img class="d-block w-100" src="../assets/images/home2.png" width="800" height="400" alt="...">
 					<div class="carousel-caption d-none d-md-block">
@@ -78,7 +84,6 @@
 						<p>...</p>
 					</div>
 				</div>
-				<!--GAMBAR 3 nanti echo kan aja dari DB terserah yg mana -->
 				<div class="carousel-item">
 					<img  class="d-block w-100" src="../assets/images/home3.png" width="800" height="400" alt="...">
 					<div class="carousel-caption d-none d-md-block">
@@ -96,7 +101,7 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
-	</div><br><br>
+	</div><br><br> -->
 <!--/CAROSEL-->
 	<div class="row">
 		<!--left col-->
@@ -104,7 +109,7 @@
 			<!--PRODUK TERARU-->
 			<div class="container-fluid">
 				<div class="new-product">
-					<h2 class="tulisan text-left">Highlight Produk</h2><hr><!--Sedikit Bimbang Karena Barangnya cuma 3 jenis-->
+					<h2 class="tulisan text-left">Products Highlight</h2><hr><!--Sedikit Bimbang Karena Barangnya cuma 3 jenis-->
 				</div>
 				<!--INI ISINYA GAMBAR SEMUA QUERY AJA 7 gambar yang ada di DB-->
 				<div class="foto-product">
@@ -131,7 +136,7 @@
 			<!--DESKRIPSI-->
 			<div class="container-fluid">
 				<div class="deskipsi">
-					<h2 class="tulisan text-left">Deskripsi</h2><hr>
+					<h2 class="tulisan text-left">Description</h2><hr>
 				</div>
 				<div class="isi">
 					<p class="tulisan text-justify">Hate Ente merupakan tempat penyewaan handy talky (HT) terbaik dan termurah di wilayah bandung dan sekitarnya. Kami menawarkan jasa sewa handy Talky dengan kualitas terbaik dan stok tak terbatas. Dengan menggunakan HT kami, dijamin acara anda dapat berjalan dengan lancar.</p>
@@ -148,7 +153,7 @@
 			   <div class="isi">
 					<p><i class="fa fa-envelope fa-1x"></i>E-Mail : htsewa068@gmail.com</p>
 					<br />
-					<p><i class="fa fa-phone fa-1x"></i> CP : 081376201449 - Reihard Raymond </p>
+					<p><i class="fa fa-phone fa-1x"></i> CP : 081376201449 - Reinhard Raymond </p>
 					<br />
 					<br />
 				</div>
@@ -158,7 +163,7 @@
 					</div>
 					<div class="social_media">
 						<a href="instagram://user?username=bandungsewaht"><img src="../assets/images/instagram.svg" class="social"></i></a>
-						<a href="https://wa.me/6281362020369" target="_blank" ><img src="../assets/images/whatsapp.svg" class="social"></i></a>
+						<a href="https://wa.me/6281376201449" target="_blank" ><img src="../assets/images/whatsapp.svg" class="social"></i></a>
 						<a href="http://line.me/ti/p/~@dxy4876d" target="_blank"><img src="../assets/images/line.svg" class="social"></i></a>
 					</div>
 				</div>

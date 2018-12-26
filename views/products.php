@@ -82,7 +82,7 @@
 								<div class="product-content">
 									<a href="">	
 										<h3 class="title"><a href="/detail?id='.$product->id.'">'.$product->name.'</a></h3>
-										<span class="price">'.$product->cost.'</span>
+										<span class="price">Rp '.$product->cost.'</span>
 									</a>
 								</div>
 							</div>
