@@ -64,7 +64,6 @@
 		</div>
 	</header><br>
 
-<div class="content">
 	<div class="row">
 		<div class="col-sm-1">
 
@@ -193,13 +192,10 @@
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</div><br><br>
 	<!-- FOOTER -->
-	<div class="container-fluid bg-dark">
-		<div class="row copyright align-self-end">
-			<div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
-		</div>
+	<div class="container-fluid">
+		<div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
 	</div>
 	
 </body>

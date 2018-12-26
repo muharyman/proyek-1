@@ -104,13 +104,11 @@
                 </div><!--row-->
             </form>
         </div>
-	</div>
+	</div><br><br>
         <!-- FOOTER -->
-    <div class="container-fluid bg-dark">
-        <div class="row copyright align-self-end">
-            <div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
-        </div>
+    <!-- FOOTER -->
+    <div class="container-fluid">
+        <div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
     </div>
-
 </body>
 </html>

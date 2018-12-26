@@ -25,9 +25,6 @@ body{
     color:gray;
     border:1px solid gray; 
 }
-.copyright{
-    height: 30px;
-}
 .gambar{
     padding-bottom: 10px;
 }
@@ -41,23 +38,18 @@ i{
     color:#6B747D;
 }
 
-.content{
-    height: 178%;
+/*FOOTER*/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 30px;
+   color: white;
+   text-align: center;
+   background-color: #6B747D;
 }
 
-/*FOOTER*/
-footer{
-    font-weight:300;
-    color: white;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: left;
-    height: 50px;
-    margin-top: -50px;
-}
 strong{
     color: white;
 }

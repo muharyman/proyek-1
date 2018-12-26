@@ -65,7 +65,6 @@
 	</div><hr>
 
 
-<<div class="content">
 	<!--LIST PRODUK-->
 	<!--DEFAULT TAMPILAN ITU 4 4 -->
 	<div class="container-fluid">
@@ -102,14 +101,12 @@
 				</div>
 			';
 		?>
-	</div><hr>
-</div>
+	</div><hr><br><br>
 
 	<!-- FOOTER -->
-	<div class="container-fluid bg-dark">
-		<div class="row copyright align-self-end">
-			<div class="footer"><strong>&copy;Copyright HT ENTE</strong>.</div>
-		</div>
+	<!-- FOOTER -->
+	<div class="container-fluid">
+		<div class="footer"><strong>&copy;Copyright HT ENTE</strong></div>
 	</div>
 	
 </body>
