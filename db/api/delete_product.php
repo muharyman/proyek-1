@@ -6,30 +6,31 @@
 
     $id = (int) $_GET["id"];
     
-    $ready = $db->prepare("select * from products where id = ?");
+    $ready = $db->prepare("select name, description, image, time, cost from products where id = ?");
     $ready->bind_param('d', $id);
     $ready->execute();
 
-    $row = $ready->get_result();
+    $ready->store_result();
+    $ready->bind_result($name, $description, $image, $time, $cost);
 
-    if (mysqli_num_rows($row)) {
-        $a = $row->fetch_assoc();
-
-        $images = explode(';', $a["image"]);
+    // Check whether the product is exist or not
+    if ($ready->fetch()) {
+        $images = explode(';', $image);
 
         $image1 = $images[0];
         $image2 = $images[1];
         $image3 = $images[2];
 
+        // return an object Product
         $product = new Product(
             $id,
-            $a["name"],
-            $a["description"],
+            $name,
+            $description,
             $image1,
             $image2,
             $image3,
-            $a["time"],
-            $a["cost"]
+            $time,
+            $cost
         );
     }
     else {

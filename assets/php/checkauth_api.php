@@ -6,16 +6,16 @@
     $token = $_COOKIE["token"];
 
     // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
-    $ready = $db->prepare("select * from admin_access where username = ? and token = ?");
+    $ready = $db->prepare("select time from admin_access where username = ? and token = ?");
     $ready->bind_param('ss', $username, $token);
     $ready->execute();
 
-    // Get the result of execution
-    $row = $ready->get_result();
-
+    $ready->store_result();
+    $ready->bind_result($time_db);
+    
     // check whether there is a result or not
-    if (mysqli_num_rows($row)) {
-        $the_time = $row->fetch_assoc()["time"];
+    if ($ready->fetch()) {
+        $the_time = $time_db;
         
         if (time() > $the_time) {
             header('Location: /login');

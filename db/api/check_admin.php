@@ -11,12 +11,12 @@
     $ready->bind_param('s', $username);
     $ready->execute();
     
-    // Get the result of execution
-    $row = $ready->get_result();
+    $ready->store_result();
+    $ready->bind_result($password_db);
     
     // check whether there is a result or not
-    if (mysqli_num_rows($row)) {
-        if (password_verify($password, $row->fetch_assoc()["password"])) {
+    if ($ready->fetch()) {
+        if (password_verify($password, $password_db)) {
             
             // Set token in database
             include("../../assets/php/token.php");

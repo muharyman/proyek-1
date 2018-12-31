@@ -6,32 +6,31 @@
         $string = $input;
 
         // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
-        $ready = $db->prepare("select * from products where name like CONCAT('%',?,'%')");
+        $ready = $db->prepare("select id, name, description, image, time, cost from products where name like CONCAT('%',?,'%')");
         $ready->bind_param('s', $string);
         $ready->execute();
         
-        // Get the result of execution
-        $search_result = $ready->get_result();
+        $ready->store_result();
+        $ready->bind_result($id, $name, $description, $image, $time, $cost);
 
         $products = array();
-        while($row = $search_result->fetch_assoc()) {
-
-            $images = explode(';', $row["image"]);
+        while($ready->fetch()) {
+            $images = explode(';', $image);
 
             $image1 = $images[0];
             $image2 = $images[1];
             $image3 = $images[2];
 
             array_push($products, new Product(
-                $row["id"],
-                $row["name"],
-                $row["description"],
+                $id,
+                $name,
+                $description,
                 $image1,
                 $image2,
                 $image3,
-                $row["time"],
-                $row["cost"])
-            );
+                $time,
+                $cost
+            ));
         }
 
         return $products;

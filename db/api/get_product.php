@@ -5,18 +5,16 @@
         include('db/model/Product.php');
 
         // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
-        $ready = $db->prepare("select * from products where id = ?");
+        $ready = $db->prepare("select name, description, image, time, cost from products where id = ?");
         $ready->bind_param('d', $id);
         $ready->execute();
         
-        // Get the result of execution
-        $row = $ready->get_result();
+        $ready->store_result();
+        $ready->bind_result($name, $description, $image, $time, $cost);
 
         // Check whether the product is exist or not
-        if (mysqli_num_rows($row)) {
-            $a = $row->fetch_assoc();
-
-            $images = explode(';', $a["image"]);
+        if ($ready->fetch()) {
+            $images = explode(';', $image);
 
             $image1 = $images[0];
             $image2 = $images[1];
@@ -25,13 +23,13 @@
             // return an object Product
             return new Product(
                 $id,
-                $a["name"],
-                $a["description"],
+                $name,
+                $description,
                 $image1,
                 $image2,
                 $image3,
-                $a["time"],
-                $a["cost"]
+                $time,
+                $cost
             );
         }
         else {

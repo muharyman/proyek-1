@@ -34,7 +34,14 @@
     // the total image size cannot be more than 30 MB
     if (($file_size1 + $file_size2 + $file_size3) <= 30000000) {
         $upload_time = time();
-        $old_images = $db->query("select image from products where id = " . $id)->fetch_assoc()["image"];
+
+        // Prepared Statement (prepare, bind, execute) -> prevent SQL injection
+        $ready = $db->prepare("select image from products where id = ?");
+        $ready->bind_param('d', $id);
+        $ready->execute();
+        
+        $ready->store_result();
+        $ready->bind_result($old_images);
 
         $images = explode(';', $old_images);
         $old_image1 = $images[0];
